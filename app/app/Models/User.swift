@@ -9,7 +9,7 @@
 import Foundation
 
 public class User: Decodable {
-    //    let dictionaryRepresentation: [String: Any]
+    
     public let login: String?
     public let company: String?
     public let email: String?
