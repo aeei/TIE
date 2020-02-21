@@ -16,7 +16,5 @@
     "url": "https://github.com/aeei/TIE/issues"
   },
   "homepage": "https://github.com/aeei/TIE#readme",
-  "dependencies": {
-    "rn-apple-healthkit": "^0.7.3"
-  }
+  "dependencies": {}
 }
