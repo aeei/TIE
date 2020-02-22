@@ -15,8 +15,9 @@
 		A23A61B523FFF51100EEABAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23A61B423FFF51100EEABAC /* Preview Assets.xcassets */; };
 		A23A61B823FFF51100EEABAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23A61B623FFF51100EEABAC /* LaunchScreen.storyboard */; };
 		A23A61C923FFFD6200EEABAC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A61C823FFFD6200EEABAC /* Configuration.swift */; };
-		A23A61CB2400086100EEABAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A61CA2400086100EEABAC /* User.swift */; };
+		A23A61CB2400086100EEABAC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A61CA2400086100EEABAC /* UserModel.swift */; };
 		A23A61CF24000E4C00EEABAC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23A61CE24000E4C00EEABAC /* HealthKit.framework */; };
+		A23A61D7240011C400EEABAC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A61D6240011C400EEABAC /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,12 +30,13 @@
 		A23A61B423FFF51100EEABAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A23A61B723FFF51100EEABAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A23A61B923FFF51100EEABAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A23A61C423FFF6D600EEABAC /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Development.xcconfig; path = app/Development.xcconfig; sourceTree = SOURCE_ROOT; };
-		A23A61C523FFF73E00EEABAC /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = ../Production.xcconfig; sourceTree = "<group>"; };
 		A23A61C823FFFD6200EEABAC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		A23A61CA2400086100EEABAC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A23A61CA2400086100EEABAC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A23A61CC24000E4C00EEABAC /* app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = app.entitlements; sourceTree = "<group>"; };
 		A23A61CE24000E4C00EEABAC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		A23A61D6240011C400EEABAC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		A28A726724001881005DDE92 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		A28A7269240018C5005DDE92 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +71,12 @@
 		A23A61A723FFF51100EEABAC /* app */ = {
 			isa = PBXGroup;
 			children = (
+				A28A7268240018A4005DDE92 /* Configs */,
 				A23A61D52400111000EEABAC /* Views */,
 				A23A61D42400104400EEABAC /* Assets */,
 				A23A61D32400102000EEABAC /* Enums */,
 				A23A61D22400100E00EEABAC /* Services */,
 				A23A61D12400100500EEABAC /* Models */,
-				A23A61D024000FE200EEABAC /* Configurations */,
 				A23A61CC24000E4C00EEABAC /* app.entitlements */,
 				A23A61B623FFF51100EEABAC /* LaunchScreen.storyboard */,
 				A23A61B923FFF51100EEABAC /* Info.plist */,
@@ -102,19 +104,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A23A61D024000FE200EEABAC /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				A23A61C423FFF6D600EEABAC /* Development.xcconfig */,
-				A23A61C523FFF73E00EEABAC /* Production.xcconfig */,
-			);
-			path = Configurations;
-			sourceTree = "<group>";
-		};
 		A23A61D12400100500EEABAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A23A61CA2400086100EEABAC /* User.swift */,
+				A23A61CA2400086100EEABAC /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +115,7 @@
 		A23A61D22400100E00EEABAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A23A61D6240011C400EEABAC /* ApiService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -148,6 +142,15 @@
 				A23A61AF23FFF51100EEABAC /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A28A7268240018A4005DDE92 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				A28A726724001881005DDE92 /* Development.xcconfig */,
+				A28A7269240018C5005DDE92 /* Production.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +226,10 @@
 			files = (
 				A23A61A923FFF51100EEABAC /* AppDelegate.swift in Sources */,
 				A23A61C923FFFD6200EEABAC /* Configuration.swift in Sources */,
-				A23A61CB2400086100EEABAC /* User.swift in Sources */,
+				A23A61CB2400086100EEABAC /* UserModel.swift in Sources */,
 				A23A61AB23FFF51100EEABAC /* SceneDelegate.swift in Sources */,
 				A23A61B023FFF51100EEABAC /* ContentView.swift in Sources */,
+				A23A61D7240011C400EEABAC /* ApiService.swift in Sources */,
 				A23A61AE23FFF51100EEABAC /* app.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +250,7 @@
 /* Begin XCBuildConfiguration section */
 		A23A61BA23FFF51100EEABAC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A23A61C423FFF6D600EEABAC /* Development.xcconfig */;
+			baseConfigurationReference = A28A726724001881005DDE92 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -307,7 +311,7 @@
 		};
 		A23A61BB23FFF51100EEABAC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A23A61C523FFF73E00EEABAC /* Production.xcconfig */;
+			baseConfigurationReference = A28A7269240018C5005DDE92 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

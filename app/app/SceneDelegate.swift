@@ -33,22 +33,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
-    
-        let url = API.baseURL
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue(API.key, forHTTPHeaderField: "X-API-KEY")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            if let data = data,
-              let user = try? JSONDecoder().decode(User.self, from: data) {
-              print(user.login ?? "")
-            }
-        })
-
-        task.resume()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

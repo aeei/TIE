@@ -8,14 +8,19 @@
 
 import Foundation
 
-public class User: Decodable {
+public class UserModel: Decodable {
     
     public let login: String?
     public let company: String?
     public let email: String?
     
+    public init?(){
+        self.login = "";
+        self.company = "";
+        self.email = "";
+    }
+
     public init(login: String?, company: String?, email: String?) {
-        
         self.login = login;
         self.company = company;
         self.email = email;

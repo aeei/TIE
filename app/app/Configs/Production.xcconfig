@@ -1,0 +1,13 @@
+//
+//  Development.xcconfig
+//  app
+//
+//  Created by kelly on 2020/02/21.
+//  Copyright © 2020 kelly. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_BASE_URL = api.github.com/user/aeei
+API_KEY = test
