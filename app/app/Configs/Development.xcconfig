@@ -9,5 +9,5 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-API_BASE_URL = api.github.com/user/aeei
+API_BASE_URL = jsonplaceholder.typicode.com/todos/1
 API_KEY = test

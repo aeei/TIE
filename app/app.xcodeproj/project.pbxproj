@@ -15,9 +15,11 @@
 		A23A61B523FFF51100EEABAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A23A61B423FFF51100EEABAC /* Preview Assets.xcassets */; };
 		A23A61B823FFF51100EEABAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A23A61B623FFF51100EEABAC /* LaunchScreen.storyboard */; };
 		A23A61C923FFFD6200EEABAC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A61C823FFFD6200EEABAC /* Configuration.swift */; };
-		A23A61CB2400086100EEABAC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A61CA2400086100EEABAC /* UserModel.swift */; };
 		A23A61CF24000E4C00EEABAC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A23A61CE24000E4C00EEABAC /* HealthKit.framework */; };
 		A23A61D7240011C400EEABAC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A61D6240011C400EEABAC /* ApiService.swift */; };
+		A259DA1724610CFB00654C25 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259DA1624610CFB00654C25 /* Article.swift */; };
+		A259DA19246117BA00654C25 /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259DA18246117BA00654C25 /* HealthKitService.swift */; };
+		A259DA1F246126A200654C25 /* HealthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A259DA1E246126A200654C25 /* HealthData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +33,12 @@
 		A23A61B723FFF51100EEABAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A23A61B923FFF51100EEABAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23A61C823FFFD6200EEABAC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		A23A61CA2400086100EEABAC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A23A61CC24000E4C00EEABAC /* app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = app.entitlements; sourceTree = "<group>"; };
 		A23A61CE24000E4C00EEABAC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		A23A61D6240011C400EEABAC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		A259DA1624610CFB00654C25 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		A259DA18246117BA00654C25 /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
+		A259DA1E246126A200654C25 /* HealthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthData.swift; sourceTree = "<group>"; };
 		A28A726724001881005DDE92 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		A28A7269240018C5005DDE92 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +111,8 @@
 		A23A61D12400100500EEABAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A23A61CA2400086100EEABAC /* UserModel.swift */,
+				A259DA1624610CFB00654C25 /* Article.swift */,
+				A259DA1E246126A200654C25 /* HealthData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A23A61D6240011C400EEABAC /* ApiService.swift */,
+				A259DA18246117BA00654C25 /* HealthKitService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -224,9 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A259DA19246117BA00654C25 /* HealthKitService.swift in Sources */,
+				A259DA1F246126A200654C25 /* HealthData.swift in Sources */,
+				A259DA1724610CFB00654C25 /* Article.swift in Sources */,
 				A23A61A923FFF51100EEABAC /* AppDelegate.swift in Sources */,
 				A23A61C923FFFD6200EEABAC /* Configuration.swift in Sources */,
-				A23A61CB2400086100EEABAC /* UserModel.swift in Sources */,
 				A23A61AB23FFF51100EEABAC /* SceneDelegate.swift in Sources */,
 				A23A61B023FFF51100EEABAC /* ContentView.swift in Sources */,
 				A23A61D7240011C400EEABAC /* ApiService.swift in Sources */,
