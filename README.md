@@ -1,2 +1,3 @@
-# TIE
-Today I Exercised
+# WoW
+
+Week of Workouts
